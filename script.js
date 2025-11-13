@@ -1,3 +1,39 @@
+// Navigation Tab Switching
+function initNavigation() {
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const sections = document.querySelectorAll('.content-section');
+    
+    navTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active class from all tabs
+            navTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            const targetSection = tab.getAttribute('data-section');
+            const targetElement = document.getElementById(targetSection);
+            if (targetElement) {
+                targetElement.classList.add('active');
+                
+                // Scroll to top of content smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
 // Intersection Observer for scroll animations
 const observerOptions = {
     root: null,
@@ -25,6 +61,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all info boxes
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize navigation
+    initNavigation();
     const infoBoxes = document.querySelectorAll('.info-box');
     
     infoBoxes.forEach((box, index) => {

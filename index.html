@@ -48,6 +48,24 @@
     <!-- Grass Field -->
     <div class="grass-field"></div>
 
+    <!-- Sticky Navigation Header -->
+    <nav class="sticky-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Frutiger Aero</span>
+            </div>
+            <ul class="nav-tabs">
+                <li><a href="#home" class="nav-tab active" data-section="home">Home</a></li>
+                <li><a href="#what-is" class="nav-tab" data-section="what-is">What Is It?</a></li>
+                <li><a href="#origins" class="nav-tab" data-section="origins">Origins</a></li>
+                <li><a href="#characteristics" class="nav-tab" data-section="characteristics">Characteristics</a></li>
+                <li><a href="#timeline" class="nav-tab" data-section="timeline">Timeline</a></li>
+                <li><a href="#impact" class="nav-tab" data-section="impact">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="badge-container">
             <div class="glossy-badge">
@@ -93,136 +111,157 @@
     </header>
 
     <main class="container">
-        <header class="page-header">
-            <h1 class="main-title">UX Designs: What Is Frutiger Aero?</h1>
-        </header>
-
-        <section class="info-box" data-animate>
-            <div class="box-content">
-                <div class="icon-circle">
-                    <span class="icon">🎨</span>
-                </div>
-                <h2>What is Frutiger Aero?</h2>
-                <p>Frutiger Aero is a design aesthetic that dominated the mid-2000s to early 2010s, characterized by glossy textures, vibrant colors, and optimistic themes. It represented a digital utopia where technology and nature coexisted harmoniously.</p>
-                <p>The name combines Adrian Frutiger's humanist typography philosophy with "Aero," referencing Windows Vista's translucent interface design. This aesthetic emphasized clarity, brightness, and an aspirational vision of the future.</p>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <header class="page-header">
+                <h1 class="main-title">UX Designs: What Is Frutiger Aero?</h1>
+            </header>
+            <div class="section-intro">
+                <p>Welcome to an exploration of the design aesthetic that defined the optimistic digital age of the mid-2000s. Navigate through the sections above to learn about Frutiger Aero's origins, characteristics, timeline, and lasting impact.</p>
             </div>
         </section>
 
-        <section class="info-box" data-animate>
-            <div class="box-content">
-                <div class="icon-circle">
-                    <span class="icon">👨‍🎨</span>
-                </div>
-                <h2>Origins & Creators</h2>
-                <p>While no single person "created" Frutiger Aero, it emerged from the collective work of designers at major tech companies during the mid-2000s:</p>
-                <ul>
-                    <li><strong>Microsoft</strong> - Windows Vista (2006) and Windows 7 (2009) with their Aero interface defined the aesthetic</li>
-                    <li><strong>Apple</strong> - Aqua interface elements and iTunes visualizers contributed glossy, reflective design patterns</li>
-                    <li><strong>Adobe</strong> - Creative Suite splash screens and UI elements embraced the vibrant, glassy look</li>
-                    <li><strong>Stock photo companies</strong> - Getty Images and Shutterstock popularized the nature-meets-technology imagery</li>
-                </ul>
-                <p>The aesthetic was refined through countless designers working in advertising, product design, and digital interfaces of the era.</p>
-            </div>
-        </section>
-
-        <section class="info-box" data-animate>
-            <div class="box-content">
-                <div class="icon-circle">
-                    <span class="icon">✨</span>
-                </div>
-                <h2>Key Characteristics</h2>
-                <div class="characteristics-grid">
-                    <div class="characteristic">
-                        <h3>Glossy Surfaces</h3>
-                        <p>Reflective, glass-like textures with highlights and specular lighting</p>
+        <!-- What Is It Section -->
+        <section id="what-is" class="content-section">
+            <div class="info-box" data-animate>
+                <div class="box-content">
+                    <div class="icon-circle">
+                        <span class="icon">🎨</span>
                     </div>
-                    <div class="characteristic">
-                        <h3>Vibrant Colors</h3>
-                        <p>Bright blues, greens, and whites with high saturation and contrast</p>
-                    </div>
-                    <div class="characteristic">
-                        <h3>Nature Themes</h3>
-                        <p>Water droplets, leaves, skies, and environmental imagery</p>
-                    </div>
-                    <div class="characteristic">
-                        <h3>Transparency</h3>
-                        <p>Translucent overlays, frosted glass effects, and layered elements</p>
-                    </div>
-                    <div class="characteristic">
-                        <h3>Soft Gradients</h3>
-                        <p>Smooth color transitions and ambient lighting effects</p>
-                    </div>
-                    <div class="characteristic">
-                        <h3>Optimistic Tone</h3>
-                        <p>Clean, hopeful, and aspirational visual language</p>
-                    </div>
+                    <h2>What is Frutiger Aero?</h2>
+                    <p>Frutiger Aero is a design aesthetic that dominated the mid-2000s to early 2010s, characterized by glossy textures, vibrant colors, and optimistic themes. It represented a digital utopia where technology and nature coexisted harmoniously.</p>
+                    <p>The name combines Adrian Frutiger's humanist typography philosophy with "Aero," referencing Windows Vista's translucent interface design. This aesthetic emphasized clarity, brightness, and an aspirational vision of the future.</p>
                 </div>
             </div>
         </section>
 
-        <section class="info-box" data-animate>
-            <div class="box-content">
-                <div class="icon-circle">
-                    <span class="icon">📅</span>
+        <!-- Origins Section -->
+        <section id="origins" class="content-section">
+            <div class="info-box" data-animate>
+                <div class="box-content">
+                    <div class="icon-circle">
+                        <span class="icon">👨‍🎨</span>
+                    </div>
+                    <h2>Origins & Creators</h2>
+                    <p>While no single person "created" Frutiger Aero, it emerged from the collective work of designers at major tech companies during the mid-2000s:</p>
+                    <ul>
+                        <li><strong>Microsoft</strong> - Windows Vista (2006) and Windows 7 (2009) with their Aero interface defined the aesthetic</li>
+                        <li><strong>Apple</strong> - Aqua interface elements and iTunes visualizers contributed glossy, reflective design patterns</li>
+                        <li><strong>Adobe</strong> - Creative Suite splash screens and UI elements embraced the vibrant, glassy look</li>
+                        <li><strong>Stock photo companies</strong> - Getty Images and Shutterstock popularized the nature-meets-technology imagery</li>
+                    </ul>
+                    <p>The aesthetic was refined through countless designers working in advertising, product design, and digital interfaces of the era.</p>
                 </div>
-                <h2>Peak Popularity Period</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="year">2004-2006</div>
-                        <div class="event">
-                            <h3>Early Emergence</h3>
-                            <p>Mac OS X Aqua, Windows XP Media Center, and Web 2.0 designs began establishing the aesthetic foundations</p>
-                        </div>
+            </div>
+        </section>
+
+        <!-- Characteristics Section -->
+        <section id="characteristics" class="content-section">
+            <div class="info-box" data-animate>
+                <div class="box-content">
+                    <div class="icon-circle">
+                        <span class="icon">✨</span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="year">2006-2009</div>
-                        <div class="event">
-                            <h3>Peak Era</h3>
-                            <p>Windows Vista's Aero interface launched, solidifying the style. Corporate websites, product packaging, and advertising fully embraced the aesthetic</p>
+                    <h2>Key Characteristics</h2>
+                    <div class="characteristics-grid">
+                        <div class="characteristic">
+                            <h3>Glossy Surfaces</h3>
+                            <p>Reflective, glass-like textures with highlights and specular lighting</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="year">2009-2012</div>
-                        <div class="event">
-                            <h3>Mainstream Saturation</h3>
-                            <p>Windows 7 refined Aero. The style dominated everything from tech products to healthcare branding</p>
+                        <div class="characteristic">
+                            <h3>Vibrant Colors</h3>
+                            <p>Bright blues, greens, and whites with high saturation and contrast</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="year">2012-2015</div>
-                        <div class="event">
-                            <h3>Decline</h3>
-                            <p>Flat design (iOS 7, Windows 8, Material Design) replaced Frutiger Aero as the dominant aesthetic</p>
+                        <div class="characteristic">
+                            <h3>Nature Themes</h3>
+                            <p>Water droplets, leaves, skies, and environmental imagery</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="year">2020-Present</div>
-                        <div class="event">
-                            <h3>Nostalgic Revival</h3>
-                            <p>Internet communities rediscovered and named the aesthetic, sparking renewed interest and neo-Frutiger Aero designs</p>
+                        <div class="characteristic">
+                            <h3>Transparency</h3>
+                            <p>Translucent overlays, frosted glass effects, and layered elements</p>
+                        </div>
+                        <div class="characteristic">
+                            <h3>Soft Gradients</h3>
+                            <p>Smooth color transitions and ambient lighting effects</p>
+                        </div>
+                        <div class="characteristic">
+                            <h3>Optimistic Tone</h3>
+                            <p>Clean, hopeful, and aspirational visual language</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="info-box" data-animate>
-            <div class="box-content">
-                <div class="icon-circle">
-                    <span class="icon">🌍</span>
+        <!-- Timeline Section -->
+        <section id="timeline" class="content-section">
+            <div class="info-box" data-animate>
+                <div class="box-content">
+                    <div class="icon-circle">
+                        <span class="icon">📅</span>
+                    </div>
+                    <h2>Peak Popularity Period</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2004-2006</div>
+                            <div class="event">
+                                <h3>Early Emergence</h3>
+                                <p>Mac OS X Aqua, Windows XP Media Center, and Web 2.0 designs began establishing the aesthetic foundations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2006-2009</div>
+                            <div class="event">
+                                <h3>Peak Era</h3>
+                                <p>Windows Vista's Aero interface launched, solidifying the style. Corporate websites, product packaging, and advertising fully embraced the aesthetic</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2009-2012</div>
+                            <div class="event">
+                                <h3>Mainstream Saturation</h3>
+                                <p>Windows 7 refined Aero. The style dominated everything from tech products to healthcare branding</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2012-2015</div>
+                            <div class="event">
+                                <h3>Decline</h3>
+                                <p>Flat design (iOS 7, Windows 8, Material Design) replaced Frutiger Aero as the dominant aesthetic</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2020-Present</div>
+                            <div class="event">
+                                <h3>Nostalgic Revival</h3>
+                                <p>Internet communities rediscovered and named the aesthetic, sparking renewed interest and neo-Frutiger Aero designs</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h2>Cultural Impact</h2>
-                <p>Frutiger Aero represented more than just a visual style—it embodied the optimism of the mid-2000s digital age. This was an era of hope in technology's potential to solve problems and improve lives.</p>
-                <p>The aesthetic appeared everywhere:</p>
-                <ul>
-                    <li>Operating systems and software interfaces</li>
-                    <li>Corporate branding and advertising</li>
-                    <li>Product packaging for tech and healthcare</li>
-                    <li>Television graphics and motion design</li>
-                    <li>Educational materials and presentations</li>
-                    <li>Website designs and digital media</li>
-                </ul>
-                <p>Its decline coincided with a shift toward minimalism and flat design, reflecting changing attitudes about technology and digital interfaces. Today, Frutiger Aero is experiencing a nostalgic revival as millennials and Gen Z rediscover the optimistic aesthetics of their youth.</p>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="content-section">
+            <div class="info-box" data-animate>
+                <div class="box-content">
+                    <div class="icon-circle">
+                        <span class="icon">🌍</span>
+                    </div>
+                    <h2>Cultural Impact</h2>
+                    <p>Frutiger Aero represented more than just a visual style—it embodied the optimism of the mid-2000s digital age. This was an era of hope in technology's potential to solve problems and improve lives.</p>
+                    <p>The aesthetic appeared everywhere:</p>
+                    <ul>
+                        <li>Operating systems and software interfaces</li>
+                        <li>Corporate branding and advertising</li>
+                        <li>Product packaging for tech and healthcare</li>
+                        <li>Television graphics and motion design</li>
+                        <li>Educational materials and presentations</li>
+                        <li>Website designs and digital media</li>
+                    </ul>
+                    <p>Its decline coincided with a shift toward minimalism and flat design, reflecting changing attitudes about technology and digital interfaces. Today, Frutiger Aero is experiencing a nostalgic revival as millennials and Gen Z rediscover the optimistic aesthetics of their youth.</p>
+                </div>
             </div>
         </section>
     </main>
