@@ -1,36 +1,77 @@
 // Navigation Tab Switching
-function initNavigation() {
+let currentSectionIndex = 0;
+const sectionOrder = ['home', 'what-is', 'origins', 'characteristics', 'timeline', 'impact'];
+
+function switchToSection(sectionId, direction = 'right') {
     const navTabs = document.querySelectorAll('.nav-tab');
     const sections = document.querySelectorAll('.content-section');
+    const targetElement = document.getElementById(sectionId);
+    
+    if (!targetElement) return;
+    
+    // Find and update active tab
+    navTabs.forEach(tab => {
+        if (tab.getAttribute('data-section') === sectionId) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+    
+    // Add exit animation to current section
+    const currentSection = document.querySelector('.content-section.active');
+    if (currentSection) {
+        currentSection.classList.add(direction === 'right' ? 'slide-out-left' : 'slide-out-right');
+        currentSection.classList.remove('active');
+    }
+    
+    // Add enter animation to target section
+    setTimeout(() => {
+        targetElement.classList.add('active', direction === 'right' ? 'slide-in-right' : 'slide-in-left');
+        
+        // Clean up animation classes after animation completes
+        setTimeout(() => {
+            sections.forEach(section => {
+                section.classList.remove('slide-out-left', 'slide-out-right', 'slide-in-left', 'slide-in-right');
+            });
+        }, 450);
+    }, 50);
+    
+    // Update current index
+    currentSectionIndex = sectionOrder.indexOf(sectionId);
+}
+
+function initNavigation() {
+    const navTabs = document.querySelectorAll('.nav-tab');
     
     navTabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // Remove active class from all tabs
-            navTabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            tab.classList.add('active');
-            
-            // Hide all sections
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show target section
             const targetSection = tab.getAttribute('data-section');
-            const targetElement = document.getElementById(targetSection);
-            if (targetElement) {
-                targetElement.classList.add('active');
-                
-                // Scroll to top of content smoothly
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
+            const currentIndex = currentSectionIndex;
+            const targetIndex = sectionOrder.indexOf(targetSection);
+            const direction = targetIndex > currentIndex ? 'right' : 'left';
+            
+            switchToSection(targetSection, direction);
         });
+    });
+}
+
+// Arrow key navigation
+function initArrowKeyNavigation() {
+    document.addEventListener('keydown', (e) => {
+        // Right arrow or D key
+        if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+            e.preventDefault();
+            const nextIndex = (currentSectionIndex + 1) % sectionOrder.length;
+            switchToSection(sectionOrder[nextIndex], 'right');
+        }
+        // Left arrow or A key
+        else if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+            e.preventDefault();
+            const prevIndex = (currentSectionIndex - 1 + sectionOrder.length) % sectionOrder.length;
+            switchToSection(sectionOrder[prevIndex], 'left');
+        }
     });
 }
 
@@ -63,6 +104,8 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize navigation
     initNavigation();
+    // Initialize arrow key navigation
+    initArrowKeyNavigation();
     const infoBoxes = document.querySelectorAll('.info-box');
     
     infoBoxes.forEach((box, index) => {
